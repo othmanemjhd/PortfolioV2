@@ -338,27 +338,27 @@
 			// Remove the link from the document
 			document.body.removeChild(link);
 		});
-		var sendMail = function () {
-			document.getElementById("contactForm").addEventListener("submit", function (event) {
-				event.preventDefault();
+	};
+	var sendMail = function () {
+		document.getElementById("contactForm").addEventListener("submit", function (event) {
+			event.preventDefault();
 
-				// Get form data
-				var formData = new FormData(event.target);
+			// Get form data
+			var formData = new FormData(event.target);
 
-				// Send form data to the server-side script using Fetch API
-				fetch("send_email.php", {
-					method: "POST",
-					body: formData
+			// Send form data to the server-side script using Fetch API
+			fetch("send_email.php", {
+				method: "POST",
+				body: formData
+			})
+				.then(response => response.json()) // Assuming the server responds with JSON
+				.then(data => {
+					console.log(data); // You can handle the server response here
 				})
-					.then(response => response.json()) // Assuming the server responds with JSON
-					.then(data => {
-						console.log(data); // You can handle the server response here
-					})
-					.catch(error => console.error("Error:", error));
-			});
+				.catch(error => console.error("Error:", error));
+		});
 
-		}
-	}
+	};
 
 	// Document on load.
 	$(function () {
