@@ -314,6 +314,52 @@
 		}
 	};
 
+	var downloadCV = function () {
+		// Get the button element by its ID
+		var downloadBtn = document.getElementById('downloadBtn');
+
+		// Add a click event listener
+		downloadBtn.addEventListener('click', function () {
+			// Create a link element
+			var link = document.createElement('a');
+
+			// Set the download attribute with the desired filename for your CV
+			link.download = 'othmane_moujahid_CV.pdf';
+
+			// Set the href attribute to the path of your CV file
+			link.href = '/path/to/your-cv.pdf';
+
+			// Append the link to the document
+			document.body.appendChild(link);
+
+			// Trigger a click on the link to initiate the download
+			link.click();
+
+			// Remove the link from the document
+			document.body.removeChild(link);
+		});
+		var sendMail = function () {
+			document.getElementById("contactForm").addEventListener("submit", function (event) {
+				event.preventDefault();
+
+				// Get form data
+				var formData = new FormData(event.target);
+
+				// Send form data to the server-side script using Fetch API
+				fetch("send_email.php", {
+					method: "POST",
+					body: formData
+				})
+					.then(response => response.json()) // Assuming the server responds with JSON
+					.then(data => {
+						console.log(data); // You can handle the server response here
+					})
+					.catch(error => console.error("Error:", error));
+			});
+
+		}
+	}
+
 	// Document on load.
 	$(function () {
 		fullHeight();

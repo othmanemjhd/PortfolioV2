@@ -1,0 +1,9 @@
+Skills part 
+
+front-end languages (HTML-CSS-JS) : 70%
+BAck-end languages (JAVA) : 80%
+DATABASES (MYSQL , PostgreSQL,ORACLE) : 85%
+Frameworks(SPRING BOOT -) 80%
+APIS (third-party APIs, RESTfil APIS) - 75%
+TOOLS (GIT - SONAQUBE - Postman) - 65%
+OTHERS(UML - DevOps - Docker - Junit - TDD) 60%
