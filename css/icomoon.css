@@ -2028,6 +2028,13 @@
   color: #8a3ab9;
 }
 
+.icon-github:before {
+  content: "\f09b";
+  /* Unicode for the GitHub icon in Font Awesome */
+  color: #333;
+  /* Customize the color as needed */
+}
+
 .icon-whatsapp:before {
   content: "\eac3";
 }

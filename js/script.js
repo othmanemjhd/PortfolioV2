@@ -20,3 +20,10 @@ function sendEmail() {
             alert("Error sending email. Please try again later.");
         });
 }
+function hideLoadMore() {
+    // Get the button element
+    var loadMoreBtn = document.getElementById("loadMoreBtn");
+
+    // Hide the button by setting its display property to "none"
+    loadMoreBtn.style.display = "none";
+}
