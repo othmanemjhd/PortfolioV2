@@ -36,6 +36,28 @@
 
 	};
 
+	var fullWidth = function () {
+
+		if (!isMobile.any()) {
+			$('.js-fullwidth').css('width', $(window).width());
+			$(window).resize(function () {
+				$('.js-fullwidth').css('width', $(window).width());
+			});
+		}
+
+	};
+	var fullHeightWidth = function () {
+		if (!isMobile.any()) {
+			$('.js-fullHeightwidth').css('width', $(window).width());
+			$('.js-fullHeightwidth').css('height', $(window).height());
+			$(window).resize(function () {
+				$('.js-fullHeightwidth').css('width', $(window).width());
+				$('.js-fullHeightwidth').css('height', $(window).height());
+
+			});
+		}
+	};
+
 
 	var counter = function () {
 		$('.js-counter').countTo({
@@ -317,6 +339,8 @@
 	// Document on load.
 	$(function () {
 		fullHeight();
+		fullWidth();
+		fullHeightWidth();
 		counter();
 		counterWayPoint();
 		contentWayPoint();

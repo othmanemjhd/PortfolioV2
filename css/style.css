@@ -309,7 +309,7 @@ figure figcaption {
 }
 
 .container-wrap {
-  max-width: 1170px;
+  max-width: 1650px;
   margin: 0 auto;
 }
 
@@ -354,6 +354,7 @@ figure figcaption {
   background-position: bottom center;
   min-height: 400px;
   position: relative;
+
 }
 
 #colorlib-hero .flexslider .flex-control-nav {
