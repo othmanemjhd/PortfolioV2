@@ -309,7 +309,7 @@ figure figcaption {
 }
 
 .container-wrap {
-  max-width: 1650px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
